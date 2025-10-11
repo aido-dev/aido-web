@@ -45,4 +45,5 @@ By participating, you agree to uphold our standards in CODE_OF_CONDUCT.md.
 ## License
 
 Licensed under the Apache License, Version 2.0 (Apache-2.0). See LICENSE for details.
+
 Note: Portions of the code and assets were created with the assistance of AI.
