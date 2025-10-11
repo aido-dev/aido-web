@@ -1,0 +1,7 @@
+# robots.txt for aido-web
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Update the sitemap URL to your production domain
+Sitemap: https://aido-dev.ai/sitemap.xml

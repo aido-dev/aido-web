@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,viewport-fit=cover"
+        />
+        <title>Aido — AI Coding Assistant for GitHub PRs</title>
+        <meta
+            name="description"
+            content="Aido is an open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, and improve code directly from PR comments."
+        />
+        <link rel="icon" href="assets/images/aido_white_bg-2.png" />
+        <meta
+            property="og:title"
+            content="Aido — AI Coding Assistant for GitHub PRs"
+        />
+        <meta
+            property="og:description"
+            content="Review, summarize, explain, and improve code via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+        />
+        <!-- TODO: Update og:image to your final Cloudflare domain -->
+        <meta
+            property="og:image"
+            content="https://aido-dev.ai/assets/images/aido_white_bg-2.png"
+        />
+        <!-- TODO: Update og:url to your final Cloudflare domain -->
+        <meta property="og:url" content="https://aido-dev.ai/" />
+        <meta name="theme-color" content="#0a1630" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <div class="stars"></div>
+
+        <div id="wrapper">
+            <!-- HERO / HOME -->
+            <header id="home">
+                <div class="inner">
+                    <div class="logo" aria-hidden="true">
+                        <img
+                            src="assets/images/aido_white_bg-2.png"
+                            alt="Aido logo"
+                        />
+                    </div>
+
+                    <h1>Aido</h1>
+                    <p class="subtitle">
+                        AI-powered coding assistant for GitHub PRs —
+                        open-source, multi-provider (Gemini, ChatGPT &amp;
+                        Claude).
+                    </p>
+
+                    <p class="paragraph">
+                        Meet Aido — your open-source, multi-provider AI coding
+                        assistant for GitHub. Run code reviews, summaries,
+                        explanations, and code improvements directly from pull
+                        request comments using
+                        <code>aido &lt;command&gt;</code>.
+                    </p>
+
+                    <p class="paragraph">
+                        Fully modular, configurable, and extensible to fit your
+                        workflows. Works with GitHub Actions. Aido and Octocat
+                        are friends 👋 — choose different providers &amp; models
+                        to help you ship better code faster with consistent,
+                        unbiased reviews.
+                    </p>
+
+                    <div class="cta">
+                        <a class="btn" href="#features">Explore features</a>
+                        <a
+                            class="btn secondary"
+                            href="https://github.com/aido-dev/aido"
+                            target="_blank"
+                            rel="noopener"
+                            >View on GitHub</a
+                        >
+                    </div>
+
+                    <nav aria-label="Sections">
+                        <a href="#features">Commands</a>
+                        <a href="#how">How it works</a>
+                        <a href="#why">Why Aido</a>
+                        <a href="#about">About</a>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- PANELS -->
+
+            <!-- Features / Commands -->
+            <section id="features" class="panel">
+                <article>
+                    <h2>Run powerful commands from PR comments</h2>
+                    <p>
+                        Trigger Aido from any pull request using a short comment
+                        like <code>aido summarize</code>. Below are the core
+                        commands.
+                    </p>
+
+                    <div class="grid">
+                        <div class="card">
+                            <h3><code>aido summarize</code></h3>
+                            <p>
+                                Produces a clean, action-oriented summary of the
+                                changes across files with highlights, risks, and
+                                follow-ups.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3><code>aido review</code></h3>
+                            <p>
+                                Full AI review: flags bugs, edge cases, style
+                                issues, and security concerns with inline
+                                suggestions and rationales.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                <code>aido suggest</code> (alias:
+                                <code>aido improve</code>)
+                            </h3>
+                            <p>
+                                Auto-proposes refactors: clarity, performance,
+                                testing, and DX improvements with ready-to-paste
+                                patches.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3><code>aido explain</code></h3>
+                            <p>
+                                Explains tricky diffs in plain language,
+                                includes examples, trade-offs, and references
+                                for faster onboarding.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="cta">
+                        <a class="btn secondary" href="#home">← Back</a>
+                        <a
+                            class="btn"
+                            href="https://github.com/aido-dev/aido"
+                            target="_blank"
+                            rel="noopener"
+                            >Get Aido on GitHub</a
+                        >
+                    </p>
+                </article>
+            </section>
+
+            <!-- How it works -->
+            <section id="how" class="panel">
+                <article>
+                    <h2>How Aido works (with GitHub Actions)</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>1) Drop in the workflow</h3>
+                            <p>
+                                Add the reusable workflow to your repo. Aido
+                                listens for PR comments beginning with
+                                <code>aido</code>.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>2) Choose providers &amp; models</h3>
+                            <p>
+                                Configure Gemini, ChatGPT, or Claude (or all
+                                three). Pick default models and per-command
+                                overrides.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>3) Comment to run</h3>
+                            <p>
+                                Type <code>aido review</code> or
+                                <code>aido summarize</code> in your PR. Aido
+                                replies with structured output.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>4) Modular &amp; Extensible</h3>
+                            <p>
+                                Turn features on/off, add custom prompts, wire
+                                in org policies, or emit artifacts for audits
+                                and release notes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="cta">
+                        <a class="btn secondary" href="#home">← Back</a>
+                        <a
+                            class="btn"
+                            href="https://github.com/aido-dev/aido"
+                            target="_blank"
+                            rel="noopener"
+                            >Docs &amp; Setup</a
+                        >
+                    </p>
+                </article>
+            </section>
+
+            <!-- Why Use Aido -->
+            <section id="why" class="panel">
+                <article>
+                    <h2>Why Use Aido 🚀</h2>
+                    <p>
+                        Aido helps developers and teams deliver better code
+                        faster with clear, unbiased AI assistance right inside
+                        GitHub. Here’s why developers love working with Aido:
+                    </p>
+
+                    <div class="grid">
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_2.png"
+                                alt="Aido floating with code panel"
+                            />
+                            <h3>AI-Powered Code Reviews</h3>
+                            <p>
+                                Get detailed, objective feedback on your pull
+                                requests — Aido reviews your code like a senior
+                                engineer, catching edge cases, style issues, and
+                                potential bugs.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_6.png"
+                                alt="Aido in a rocket"
+                            />
+                            <h3>Speed Up Code Reviews</h3>
+                            <p>
+                                Reduce review backlogs and ship to production
+                                faster. Aido summarizes changes and provides
+                                instant insights, helping your team focus on
+                                what matters most.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_11.png"
+                                alt="Aido hunting bugs"
+                            />
+                            <h3>Find Bugs Early</h3>
+                            <p>
+                                Spot potential issues before they reach
+                                production. Aido analyzes your changes and
+                                points out hidden risks and logic flaws
+                                automatically.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_9.png"
+                                alt="Aido and friend thumbs up"
+                            />
+                            <h3>Seamless GitHub Integration</h3>
+                            <p>
+                                Aido works directly through GitHub Actions —
+                                just comment
+                                <code>aido &lt;command&gt;</code> on your PRs
+                                and watch Aido do its magic.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_5.png"
+                                alt="Aido winner"
+                            />
+                            <h3>Simple for Everyone</h3>
+                            <p>
+                                No complex setup or AI knowledge required. Even
+                                non-coders can use Aido to summarize, explain,
+                                or improve code with a single comment.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_4.png"
+                                alt="Aido with a mug"
+                            />
+                            <h3>Understand Code Easily</h3>
+                            <p>
+                                Aido explains tricky changes in plain language —
+                                perfect for onboarding, code reviews, and anyone
+                                who wants to understand what’s really going on.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_15.png"
+                                alt="Aido floating in space"
+                            />
+                            <h3>Free &amp; Open Source</h3>
+                            <p>
+                                Fully open source and community-driven — extend,
+                                fork, and customize Aido to fit your development
+                                workflow or company standards.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_8.png"
+                                alt="Aido high-five with octo-cat friend"
+                            />
+                            <h3>Built for GitHub</h3>
+                            <p>
+                                Designed to blend perfectly with GitHub’s
+                                workflow. Aido lives where you work — inside
+                                your pull requests.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img
+                                src="assets/images/aido_3.png"
+                                alt="Aido planting a flag"
+                            />
+                            <h3>Deliver Better Code, Faster</h3>
+                            <p>
+                                Combine all of Aido’s powers to reduce technical
+                                debt, increase quality, and ship confidently —
+                                every single time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="cta">
+                        <a class="btn secondary" href="#home">← Back</a>
+                        <a
+                            class="btn"
+                            href="https://github.com/aido-dev/aido"
+                            target="_blank"
+                            rel="noopener"
+                            >Get Started on GitHub</a
+                        >
+                    </p>
+                </article>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="panel">
+                <article>
+                    <h2>About Aido</h2>
+                    <p>
+                        <strong>Aido</strong> lives at
+                        <code>aido-dev.ai</code> and is built for modern teams
+                        shipping fast on GitHub. It keeps reviews consistent,
+                        reduces cognitive load, and surfaces risks early —
+                        without getting in your way.
+                    </p>
+                    <ul>
+                        <li>Open-source, community-friendly</li>
+                        <li>Provider-agnostic: Gemini, ChatGPT, Claude</li>
+                        <li>PR-native UX through GitHub Actions</li>
+                        <li>Configurable prompts, policies, and outputs</li>
+                    </ul>
+
+                    <p class="cta">
+                        <a class="btn secondary" href="#home">← Back</a>
+                        <a
+                            class="btn"
+                            href="https://github.com/aido-dev/aido"
+                            target="_blank"
+                            rel="noopener"
+                            >Contribute on GitHub</a
+                        >
+                    </p>
+                </article>
+            </section>
+        </div>
+
+        <footer>
+            © <span id="y"></span> Aido —
+            <a
+                href="https://github.com/aido-dev/aido"
+                target="_blank"
+                rel="noopener"
+                style="color: #9db0d0"
+                >github.com/aido-dev/aido</a
+            >
+        </footer>
+
+        <script>
+            // year
+            document.getElementById("y").textContent = new Date().getFullYear();
+
+            // allow Esc to close panels (go back to #home)
+            addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && location.hash)
+                    location.hash = "#home";
+            });
+
+            // If no hash, keep hero visible; if direct deep link, panel opens.
+            if (!location.hash) location.hash = "#home";
+        </script>
+    </body>
+</html>

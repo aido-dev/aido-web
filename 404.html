@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,viewport-fit=cover"
+        />
+        <title>404 — Page not found | Aido</title>
+        <meta name="robots" content="noindex" />
+        <link rel="icon" href="assets/images/aido_white_bg-2.png" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <meta property="og:title" content="404 — Page not found | Aido" />
+        <meta
+            property="og:description"
+            content="The page you’re looking for doesn’t exist. Head back to the Aido home page."
+        />
+        <meta property="og:image" content="assets/images/aido_white_bg-2.png" />
+        <meta property="og:url" content="/" />
+        <meta name="theme-color" content="#0a1630" />
+    </head>
+    <body>
+        <div class="stars"></div>
+
+        <div id="wrapper">
+            <header id="not-found">
+                <div class="inner" role="alert" aria-live="polite">
+                    <div class="logo" aria-hidden="true">
+                        <img
+                            src="assets/images/aido_white_bg-2.png"
+                            alt="Aido logo"
+                        />
+                    </div>
+
+                    <h1>404 — Page not found</h1>
+                    <p class="subtitle">
+                        Looks like this star isn’t on our map.
+                    </p>
+
+                    <p>
+                        The page you’re looking for might have moved or never
+                        existed. You can go back to the home page or open an
+                        issue if you believe this is a mistake.
+                    </p>
+
+                    <div
+                        class="cta"
+                        role="navigation"
+                        aria-label="404 navigation"
+                    >
+                        <a class="btn" href="https://aido-dev.ai">Go to Home</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <footer>
+            © <span id="y"></span> Aido —
+            <a
+                href="https://github.com/aido-dev/aido-web"
+                target="_blank"
+                rel="noopener"
+                style="color: #9db0d0"
+                >github.com/aido-dev/aido-web</a
+            >
+        </footer>
+
+        <script>
+            // year
+            document.getElementById("y").textContent = new Date().getFullYear();
+        </script>
+    </body>
+</html>

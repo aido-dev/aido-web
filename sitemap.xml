@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Minimal sitemap placeholder for Aido Web.
+  - Update <loc> to your production URL (e.g., https://aido-dev.ai/).
+  - Add additional <url> entries if you create separate pages beyond the single index.html.
+  - Hash fragments (#features, #how, etc.) should not be included in sitemaps.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://aido-dev.ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
