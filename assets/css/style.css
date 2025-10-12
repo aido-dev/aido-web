@@ -328,3 +328,113 @@ footer {
     flex: 1 1 auto;
     min-height: 0;
 }
+
+/* Small devices tweaks */
+@media (max-width: 480px) {
+    /* Base type + spacing */
+    body {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+    h1 {
+        font-size: 26px;
+        letter-spacing: 0.2px;
+    }
+    .subtitle {
+        font-size: 14px;
+        margin: 0.5rem 0 0.8rem;
+    }
+    .paragraph {
+        margin: 0.9rem 0;
+    }
+
+    /* Shell and header */
+    header {
+        padding: 5vh 14px 12px;
+    }
+    .inner {
+        padding: 28px 16px 20px;
+        border-radius: 18px;
+    }
+    .logo {
+        width: 84px;
+        height: 84px;
+        border-radius: 20px;
+    }
+
+    /* Buttons and nav */
+    .btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+    nav {
+        margin-top: 8px;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    /* Panels */
+    .panel {
+        padding: 70px 12px 16px;
+    }
+    .panel article {
+        padding: 18px 14px 14px;
+        max-height: calc(100dvh - 70px - 16px);
+    }
+    .panel h2 {
+        font-size: 20px;
+    }
+
+    /* Horizontal lanes */
+    .grid {
+        gap: 12px;
+        grid-auto-columns: minmax(220px, 80%);
+    }
+    .gallery {
+        gap: 10px;
+        grid-auto-columns: minmax(200px, 80%);
+    }
+
+    /* Cards */
+    .card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+    .card h3 {
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 14px;
+    }
+    .card img {
+        max-height: clamp(100px, 24vh, 200px);
+    }
+    .gallery img {
+        height: clamp(120px, 24vh, 200px);
+        border-radius: 14px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
+        bottom: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 24px;
+    }
+    .btn {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+    .grid {
+        grid-auto-columns: minmax(190px, 85%);
+    }
+    .gallery {
+        grid-auto-columns: minmax(180px, 85%);
+    }
+}
