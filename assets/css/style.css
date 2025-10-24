@@ -33,6 +33,7 @@ body {
         radial-gradient(1200px 800px at 70% -10%, #16234b, transparent 60%),
         radial-gradient(700px 500px at 20% 110%, #13224a, transparent 60%),
         var(--bg);
+    background-size: cover, cover, auto;
     overflow-x: hidden;
 }
 
