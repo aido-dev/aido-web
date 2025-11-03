@@ -247,6 +247,7 @@ nav a:hover {
     flex-direction: column;
     min-height: 0;
     overflow: auto;
+    margin-right: 1px;
 }
 .card h3 {
     margin: 0.2rem 0 0.4rem;
