@@ -9,7 +9,7 @@
         <title>Aido — AI Coding Assistant for GitHub PRs</title>
         <meta
             name="description"
-            content="Aido is an open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, improve code, and generate documentation drafts directly from PR comments."
+            content="Aido is an open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments."
         />
 
         <meta
@@ -18,7 +18,7 @@
         />
         <meta
             property="og:description"
-            content="Review, summarize, explain, improve code, and generate docs via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+            content="Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
         />
         <meta
             property="og:image"
@@ -33,7 +33,7 @@
         />
         <meta
             name="twitter:description"
-            content="Review, summarize, explain, improve code, and generate docs via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+            content="Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
         />
         <meta
             name="twitter:image"
@@ -46,7 +46,7 @@
         />
         <link rel="canonical" href="https://aido-dev.ai/" />
 
-        <link rel="stylesheet" href="assets/css/style.css?v=0.007" />
+        <link rel="stylesheet" href="assets/css/style.css?v=0.008" />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -76,7 +76,7 @@
                 "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
                 "name": "Aido",
-                "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, improve code, and generate documentation drafts directly from PR comments.",
+                "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments.",
                 "url": "https://aido-dev.ai/",
                 "applicationCategory": "DeveloperApplication",
                 "operatingSystem": "Any",
@@ -211,8 +211,16 @@
                             </p>
                         </div>
                         <div class="card">
+                            <h3><code>aido docs</code></h3>
+                            <p>
+                                Generates documentation drafts based on code
+                                changes in the PR, making it easier to keep docs
+                                in sync with implementation.
+                            </p>
+                        </div>
+                        <div class="card">
                             <h3>
-                                <code>aido docs</code>
+                                <code>aido test</code>
                                 <span
                                     style="
                                         display: inline-block;
@@ -235,9 +243,10 @@
                                 >
                             </h3>
                             <p>
-                                Generates documentation drafts based on code
-                                changes in the PR, making it easier to keep docs
-                                in sync with implementation.
+                                Generates a structured test plan: proposed test
+                                cases, coverage gaps, fixtures, mocks, and
+                                regression notes — so PRs ship with the tests
+                                they need.
                             </p>
                         </div>
                     </div>
@@ -280,8 +289,9 @@
                             <h3>3) Comment to run</h3>
                             <p>
                                 Type <code>aido review</code>,
-                                <code>aido summarize</code> or
-                                <code>aido docs</code> in your PR. Aido replies
+                                <code>aido summarize</code>,
+                                <code>aido docs</code>, or
+                                <code>aido test</code> in your PR. Aido replies
                                 with structured output.
                             </p>
                         </div>
