@@ -9,7 +9,7 @@
         <title>Aido — AI Coding Assistant for GitHub PRs</title>
         <meta
             name="description"
-            content="Aido is an open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments."
+            content="Aido is an open-source, multi-provider AI coding assistant for GitHub pull requests. Install with a single workflow file, then review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments."
         />
 
         <meta
@@ -18,7 +18,7 @@
         />
         <meta
             property="og:description"
-            content="Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+            content="One-file install. Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
         />
         <meta
             property="og:image"
@@ -33,7 +33,7 @@
         />
         <meta
             name="twitter:description"
-            content="Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+            content="One-file install. Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
         />
         <meta
             name="twitter:image"
@@ -46,7 +46,7 @@
         />
         <link rel="canonical" href="https://aido-dev.ai/" />
 
-        <link rel="stylesheet" href="assets/css/style.css?v=0.008" />
+        <link rel="stylesheet" href="assets/css/style.css?v=0.009" />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -76,7 +76,7 @@
                 "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
                 "name": "Aido",
-                "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments.",
+                "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Install with a single workflow file, then review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments.",
                 "url": "https://aido-dev.ai/",
                 "applicationCategory": "DeveloperApplication",
                 "operatingSystem": "Any",
@@ -90,13 +90,16 @@
                     "name": "Aido",
                     "url": "https://github.com/aido-dev"
                 },
-                "softwareVersion": "1.0.5",
+                "softwareVersion": "1.2.0",
                 "featureList": [
+                    "One-file install via pinned release tags",
                     "AI-powered code reviews",
                     "PR summarization",
                     "Code explanations",
                     "Code improvement suggestions",
                     "Documentation generation",
+                    "Test planning",
+                    "Issue triage",
                     "Multi-provider support (Gemini, ChatGPT, Claude)",
                     "GitHub Actions integration"
                 ]
@@ -131,7 +134,8 @@
                         drafts directly from pull request comments using
                         <code style="text-wrap-mode: nowrap"
                             >aido &lt;command&gt;</code
-                        >.
+                        >. <strong>Install it with a single workflow file</strong> —
+                        pin a release tag and you're done.
                     </p>
 
                     <p class="paragraph">
@@ -143,7 +147,7 @@
                     </p>
 
                     <div class="cta">
-                        <a class="btn" href="#features">Explore features</a>
+                        <a class="btn" href="#install">Install in 2 minutes</a>
                         <a
                             class="btn secondary"
                             href="https://github.com/aido-dev/aido"
@@ -154,6 +158,7 @@
                     </div>
 
                     <nav aria-label="Sections">
+                        <a href="#install">Install</a>
                         <a href="#features">Commands</a>
                         <a href="#how">How it works</a>
                         <a href="#why">Why Aido</a>
@@ -163,6 +168,75 @@
             </header>
 
             <!-- PANELS -->
+
+            <!-- Install (one file) -->
+            <section id="install" class="panel">
+                <article>
+                    <h2>Install with one file</h2>
+                    <p>
+                        Since <strong>v1.2.0</strong>, adopting Aido means
+                        committing a single workflow that runs everything from a
+                        pinned release tag. No scripts to copy, and upgrading is
+                        a one-line tag bump.
+                    </p>
+
+                    <div class="grid">
+                        <div class="card wide">
+                            <h3><code>.github/workflows/aido.yml</code></h3>
+                            <pre class="snippet"><code>name: Aido
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+jobs:
+  aido:
+    if: startsWith(github.event.comment.body, 'aido')
+    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1.2.0
+    with:
+      aido_ref: v1.2.0
+    secrets:
+      CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}</code></pre>
+                        </div>
+                        <div class="card">
+                            <h3>1) Add your API key</h3>
+                            <p>
+                                Add <code>GEMINI_API_KEY</code> (default
+                                provider) as a repository secret — or
+                                <code>CHATGPT_API_KEY</code> /
+                                <code>CLAUDE_API_KEY</code> for the provider you
+                                prefer.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>2) Commit the file, comment away</h3>
+                            <p>
+                                Commit the workflow and comment
+                                <code>aido help</code> on any PR or issue. To
+                                customize a command, add its config file — no
+                                scripts needed. Prefer full control over prompts
+                                and scripts? The classic copy-based install
+                                still works.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="cta">
+                        <a class="btn secondary" href="#home">← Back</a>
+                        <a
+                            class="btn"
+                            href="https://github.com/aido-dev/aido/tree/main/examples/remote"
+                            target="_blank"
+                            rel="noopener"
+                            >Full install guide</a
+                        >
+                    </p>
+                </article>
+            </section>
 
             <!-- Features / Commands -->
             <section id="features" class="panel">
@@ -270,11 +344,13 @@
                     <h2>How Aido works (with GitHub Actions)</h2>
                     <div class="grid">
                         <div class="card">
-                            <h3>1) Drop in the workflow</h3>
+                            <h3>1) Add one file</h3>
                             <p>
-                                Add the reusable workflow to your repo. Aido
-                                listens for PR comments beginning with
-                                <code>aido</code>.
+                                Commit a single workflow pinned to an Aido
+                                release tag (<a href="#install">see Install</a>)
+                                — or copy the workflows and scripts into your
+                                repo for full control. Aido listens for PR
+                                comments beginning with <code>aido</code>.
                             </p>
                         </div>
                         <div class="card">
