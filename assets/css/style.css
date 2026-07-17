@@ -473,3 +473,8 @@ pre.snippet {
 pre.snippet code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
+#install .grid {
+    /* Don't squeeze the step cards under the tall snippet — let the
+       article scroll vertically instead of clipping card text. */
+    flex-shrink: 0;
+}
