@@ -46,7 +46,7 @@
         />
         <link rel="canonical" href="https://aido-dev.ai/" />
 
-        <link rel="stylesheet" href="assets/css/style.css?v=0.009" />
+        <link rel="stylesheet" href="assets/css/style.css?v=0.010" />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -180,10 +180,10 @@
                         a one-line tag bump.
                     </p>
 
-                    <div class="grid">
-                        <div class="card wide">
-                            <h3><code>.github/workflows/aido.yml</code></h3>
-                            <pre class="snippet"><code>name: Aido
+                    <p class="snippet-label">
+                        <code>.github/workflows/aido.yml</code>
+                    </p>
+                    <pre class="snippet"><code>name: Aido
 on:
   issue_comment:
     types: [created]
@@ -201,7 +201,8 @@ jobs:
       CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}</code></pre>
-                        </div>
+
+                    <div class="grid">
                         <div class="card">
                             <h3>1) Add your API key</h3>
                             <p>
