@@ -448,3 +448,23 @@ footer {
         grid-auto-columns: minmax(180px, 85%);
     }
 }
+
+/* Install snippet (one-file install panel) */
+.card.wide {
+    min-width: min(540px, 86vw);
+}
+pre.snippet {
+    margin: 8px 0 0;
+    padding: 12px 14px;
+    background: var(--bg-darker);
+    border: 1px solid var(--ring);
+    border-radius: 12px;
+    overflow-x: auto;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--text);
+    text-align: left;
+}
+pre.snippet code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
