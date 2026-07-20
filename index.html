@@ -74,34 +74,94 @@
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "SoftwareApplication",
-                "name": "Aido",
-                "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Install with a single workflow file, then review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments.",
-                "url": "https://aido-dev.ai/",
-                "applicationCategory": "DeveloperApplication",
-                "operatingSystem": "Any",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD"
-                },
-                "author": {
-                    "@type": "Organization",
-                    "name": "Aido",
-                    "url": "https://github.com/aido-dev"
-                },
-                "softwareVersion": "1.2.0",
-                "featureList": [
-                    "One-file install via pinned release tags",
-                    "AI-powered code reviews",
-                    "PR summarization",
-                    "Code explanations",
-                    "Code improvement suggestions",
-                    "Documentation generation",
-                    "Test planning",
-                    "Issue triage",
-                    "Multi-provider support (Gemini, ChatGPT, Claude)",
-                    "GitHub Actions integration"
+                "@graph": [
+                    {
+                        "@type": "Organization",
+                        "@id": "https://aido-dev.ai/#organization",
+                        "name": "Aido",
+                        "url": "https://aido-dev.ai/",
+                        "logo": "https://aido-dev.ai/assets/images/aido_white_bg-2.png",
+                        "sameAs": [
+                            "https://github.com/aido-dev",
+                            "https://x.com/aido_dev"
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://aido-dev.ai/#website",
+                        "url": "https://aido-dev.ai/",
+                        "name": "Aido",
+                        "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests.",
+                        "publisher": { "@id": "https://aido-dev.ai/#organization" },
+                        "inLanguage": "en"
+                    },
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://aido-dev.ai/#software",
+                        "name": "Aido",
+                        "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Install with a single workflow file, then review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments.",
+                        "url": "https://aido-dev.ai/",
+                        "applicationCategory": "DeveloperApplication",
+                        "operatingSystem": "GitHub Actions",
+                        "softwareVersion": "1.2.0",
+                        "license": "https://github.com/aido-dev/aido/blob/main/LICENSE",
+                        "publisher": { "@id": "https://aido-dev.ai/#organization" },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "USD"
+                        },
+                        "featureList": [
+                            "One-file install via pinned release tags",
+                            "AI-powered code reviews",
+                            "PR summarization",
+                            "Code explanations",
+                            "Code improvement suggestions",
+                            "Documentation generation",
+                            "Test planning",
+                            "Issue triage",
+                            "Multi-provider support (Gemini, ChatGPT, Claude)",
+                            "GitHub Actions integration"
+                        ]
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "@id": "https://aido-dev.ai/#faq",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "How do I install Aido?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Since v1.2.0 you install Aido with a single workflow file. Commit one .github/workflows/aido.yml that runs Aido from a pinned release tag, add your provider API key as a repository secret, and comment aido help on any pull request or issue. No scripts to copy; upgrading is a one-line tag bump."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Which AI providers does Aido support?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Aido works with Google Gemini, OpenAI ChatGPT, and Anthropic Claude. You bring your own API key and can pick a default provider and per-command model overrides."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Is Aido free and open source?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes. Aido is free and open source under a permissive license. You only pay your chosen AI provider for the tokens you use."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What can Aido do on a pull request or issue?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "On pull requests: aido review, summarize, explain, suggest, docs, and test. On issues: aido triage to classify, suggest labels, find similar issues, and recommend next steps."
+                                }
+                            }
+                        ]
+                    }
                 ]
             }
         </script>
