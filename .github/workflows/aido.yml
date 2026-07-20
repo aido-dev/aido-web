@@ -24,8 +24,8 @@ jobs:
   aido:
     # Cheap pre-filter: only spin up the dispatcher for `aido ...` comments.
     if: startsWith(github.event.comment.body, 'aido')
-    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1.2.0
+    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1.2.1
     with:
-      aido_ref: v1.2.0
+      aido_ref: v1.2.1
     secrets:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
