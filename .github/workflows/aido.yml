@@ -1,12 +1,11 @@
 # Aido — remote install (single file)
 #
-# Copy this ONE file to .github/workflows/aido.yml in your repository, add your
-# provider API key(s) as repository secrets, and comment `aido help` on any PR
-# or issue. No other files needed — workflows and scripts run from the pinned
-# aido-dev/aido release.
+# Runs Aido from the pinned aido-dev/aido release; no scripts to copy.
+# This repo uses Gemini only, so just GEMINI_API_KEY is wired below — add
+# CHATGPT_API_KEY / CLAUDE_API_KEY here (and as secrets) to enable those.
 #
 # To upgrade Aido, bump the tag in BOTH places below (`uses:` and `aido_ref:`).
-# To customize a command, add a config file in your repository at
+# To customize a command, add a config file at
 # .github/scripts/<command>/aido-<command>-config.json — it overrides the
 # shipped defaults (see aido-dev/aido's .github/scripts/ for the format).
 
@@ -29,6 +28,4 @@ jobs:
     with:
       aido_ref: v1.2.0
     secrets:
-      CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
