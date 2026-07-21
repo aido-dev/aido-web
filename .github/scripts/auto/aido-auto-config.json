@@ -1,7 +1,6 @@
 {
   "enabled": true,
   "aiAuthors": [
-    "dvirdung",
     "copilot",
     "claude-code[bot]",
     "cursor[bot]",
