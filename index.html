@@ -6,19 +6,19 @@
             name="viewport"
             content="width=device-width,initial-scale=1,viewport-fit=cover"
         />
-        <title>Aido — AI Coding Assistant for GitHub PRs</title>
+        <title>Aido — The AI Companion for AI-Authored Pull Requests</title>
         <meta
             name="description"
-            content="Aido is an open-source, multi-provider AI coding assistant for GitHub pull requests. Install with a single workflow file, then review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments."
+            content="Aido is an open-source, multi-provider AI companion for GitHub. When Copilot, Claude Code, or Cursor open a pull request, Aido automatically explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. Install with a single workflow file."
         />
 
         <meta
             property="og:title"
-            content="Aido — AI Coding Assistant for GitHub PRs"
+            content="Aido — The AI Companion for AI-Authored Pull Requests"
         />
         <meta
             property="og:description"
-            content="One-file install. Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+            content="When your AI opens a PR, Aido auto-explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. One-file install. Gemini, ChatGPT, Claude."
         />
         <meta
             property="og:image"
@@ -29,11 +29,11 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Aido — AI Coding Assistant for GitHub PRs"
+            content="Aido — The AI Companion for AI-Authored Pull Requests"
         />
         <meta
             name="twitter:description"
-            content="One-file install. Review, summarize, explain, improve code, generate docs, and plan tests via PR comments. Works with GitHub Actions. Providers: Gemini, ChatGPT, Claude."
+            content="When your AI opens a PR, Aido auto-explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. One-file install. Gemini, ChatGPT, Claude."
         />
         <meta
             name="twitter:image"
@@ -100,11 +100,11 @@
                         "@type": "SoftwareApplication",
                         "@id": "https://aido-dev.ai/#software",
                         "name": "Aido",
-                        "description": "Open-source, multi-provider AI coding assistant for GitHub pull requests. Install with a single workflow file, then review, summarize, explain, improve code, generate documentation drafts, and plan tests directly from PR comments.",
+                        "description": "Open-source, multi-provider AI companion for GitHub. Automatically explains, summarizes, reviews, and documents AI-authored pull requests, and runs on any PR or issue on demand. Install with a single workflow file.",
                         "url": "https://aido-dev.ai/",
                         "applicationCategory": "DeveloperApplication",
                         "operatingSystem": "GitHub Actions",
-                        "softwareVersion": "1.2.0",
+                        "softwareVersion": "1.3.2",
                         "license": "https://github.com/aido-dev/aido/blob/main/LICENSE",
                         "author": { "@id": "https://aido-dev.ai/#organization" },
                         "publisher": { "@id": "https://aido-dev.ai/#organization" },
@@ -161,6 +161,14 @@
                                     "@type": "Answer",
                                     "text": "On pull requests: aido review, summarize, explain, suggest, docs, and test. On issues: aido triage to classify, suggest labels, find similar issues, and recommend next steps."
                                 }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "Can Aido run automatically on AI-generated pull requests?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes. Add the optional aido-auto workflow and Aido runs automatically when a configured AI agent (Copilot, Claude Code, Cursor, and others) opens a pull request — explaining and summarizing by default, with review, docs, and test opt-in. It only triggers on AI-authored PRs, and any single PR can opt out with a no-aido label."
+                                }
                             }
                         ]
                     }
@@ -184,19 +192,31 @@
 
                     <h1>Aido</h1>
                     <p class="subtitle">
-                        AI-powered coding assistant for GitHub PRs —
+                        The AI companion for the pull requests your AI writes —
                         open-source, multi-provider (Gemini, ChatGPT &amp;
                         Claude).
                     </p>
 
                     <p class="paragraph">
-                        Meet Aido — your open-source, multi-provider AI coding
-                        assistant for GitHub. Run code reviews, summaries,
-                        explanations, code improvements, and documentation
-                        drafts directly from pull request comments using
+                        AI agents — Copilot, Claude Code, Cursor — are opening
+                        more and more PRs, and a human still has to understand
+                        code they didn't write. When an
+                        <strong>AI-authored PR</strong> lands, Aido can
+                        <strong
+                            >automatically explain, summarize, review, and
+                            document</strong
+                        >
+                        it — and you can run those same commands on any PR or
+                        issue on demand with
                         <code style="text-wrap-mode: nowrap"
                             >aido &lt;command&gt;</code
-                        >. <strong>Install it with a single workflow file</strong> —
+                        >.
+                    </p>
+
+                    <p class="paragraph">
+                        One companion for the whole review lifecycle, right
+                        inside GitHub Actions.
+                        <strong>Install it with a single workflow file</strong> —
                         pin a release tag and you're done.
                     </p>
 
