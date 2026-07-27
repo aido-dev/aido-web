@@ -1,6 +1,6 @@
 {
   "reviewer": {
     "provider": "GEMINI",
-    "model": "gemini-2.5-flash-lite"
+    "model": { "GEMINI": "gemini-2.5-flash-lite" }
   }
 }
