@@ -28,4 +28,5 @@ jobs:
     with:
       aido_ref: v1.4.1
     secrets:
+      CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
