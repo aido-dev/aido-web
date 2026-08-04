@@ -1,6 +1,6 @@
 {
   "reviewer": {
-    "provider": "CLAUDE",
-    "model": { "CLAUDE": "claude-opus-5" }
+    "provider": "CHATGPT",
+    "model": { "CHATGPT": "gpt-4o" }
   }
 }
