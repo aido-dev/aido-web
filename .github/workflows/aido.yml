@@ -30,3 +30,4 @@ jobs:
     secrets:
       CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
