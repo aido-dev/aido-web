@@ -1,6 +1,6 @@
 {
   "reviewer": {
-    "provider": "GEMINI",
-    "model": { "GEMINI": "gemini-2.5-flash-lite" }
+    "provider": "CHATGPT",
+    "model": { "CHATGPT": "gpt-4o" }
   }
 }
