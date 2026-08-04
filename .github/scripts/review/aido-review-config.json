@@ -1,6 +1,6 @@
 {
   "reviewer": {
     "provider": "CLAUDE",
-    "model": { "CLAUDE": "claude-opus-4-8" }
+    "model": { "CLAUDE": "claude-opus-5" }
   }
 }
