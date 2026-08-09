@@ -1,6 +1,7 @@
 {
   "reviewer": {
-    "provider": "CLAUDE",
-    "model": { "CLAUDE": "claude-opus-5" }
+    "provider": "OPENAI",
+    "baseURL": "https://api.mistral.ai/v1",
+    "model": { "OPENAI": "mistral-small-latest" }
   }
 }
