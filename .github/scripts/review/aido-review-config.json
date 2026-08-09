@@ -2,6 +2,6 @@
   "reviewer": {
     "provider": "OPENAI",
     "baseURL": "https://api.mistral.ai/v1",
-    "model": { "OPENAI": "mistral-small-latest" }
+    "model": { "OPENAI": "mistral-large-latest" }
   }
 }
