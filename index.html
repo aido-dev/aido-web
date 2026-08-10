@@ -275,9 +275,9 @@ permissions:
 jobs:
   aido:
     if: startsWith(github.event.comment.body, 'aido')
-    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1.2.0
+    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1
     with:
-      aido_ref: v1.2.0
+      aido_ref: v1
     secrets:
       CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
