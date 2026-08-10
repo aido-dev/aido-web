@@ -18,7 +18,7 @@
         />
         <meta
             property="og:description"
-            content="When your AI opens a PR, Aido auto-explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. One-file install. Gemini, ChatGPT, Claude."
+            content="When your AI opens a PR, Aido auto-explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. One-file install. Gemini, ChatGPT, Claude, or any OpenAI-compatible model."
         />
         <meta
             property="og:image"
@@ -33,7 +33,7 @@
         />
         <meta
             name="twitter:description"
-            content="When your AI opens a PR, Aido auto-explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. One-file install. Gemini, ChatGPT, Claude."
+            content="When your AI opens a PR, Aido auto-explains, summarizes, reviews, and documents it — and runs on any PR or issue on demand. One-file install. Gemini, ChatGPT, Claude, or any OpenAI-compatible model."
         />
         <meta
             name="twitter:image"
@@ -122,7 +122,7 @@
                             "Documentation generation",
                             "Test planning",
                             "Issue triage",
-                            "Multi-provider support (Gemini, ChatGPT, Claude)",
+                            "Multi-provider support (Gemini, ChatGPT, Claude, or any OpenAI-compatible endpoint — Mistral, DeepSeek, …)",
                             "GitHub Actions integration"
                         ]
                     },
@@ -143,7 +143,7 @@
                                 "name": "Which AI providers does Aido support?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Aido works with Google Gemini, OpenAI ChatGPT, and Anthropic Claude. You bring your own API key and can pick a default provider and per-command model overrides."
+                                    "text": "Aido works with Google Gemini, OpenAI ChatGPT, and Anthropic Claude — plus any OpenAI-compatible endpoint (Mistral, DeepSeek, Kimi, Grok, OpenRouter, and more) via a base-URL setting. You bring your own API key and can pick a default provider and per-command model overrides."
                                 }
                             },
                             {
@@ -151,7 +151,7 @@
                                 "name": "Is Aido free and open source?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Yes. Aido is free and open source under a permissive license. You only pay your chosen AI provider for the tokens you use."
+                                    "text": "Yes. Aido is free and open source under a permissive license, and it runs on GitHub Actions’ free minutes. Several providers also have free tiers — Google Gemini and Mistral — so you can run AI PR reviews for free; you only pay if you choose a paid model."
                                 }
                             },
                             {
@@ -193,8 +193,7 @@
                     <h1>Aido</h1>
                     <p class="subtitle">
                         The AI companion for the pull requests your AI writes —
-                        open-source, multi-provider (Gemini, ChatGPT &amp;
-                        Claude).
+                        open-source, multi-provider (Gemini, ChatGPT, Claude &amp; any OpenAI-compatible model).
                     </p>
 
                     <p class="paragraph">
@@ -276,9 +275,9 @@ permissions:
 jobs:
   aido:
     if: startsWith(github.event.comment.body, 'aido')
-    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1.2.0
+    uses: aido-dev/aido/.github/workflows/aido-dispatch.yml@v1
     with:
-      aido_ref: v1.2.0
+      aido_ref: v1
     secrets:
       CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -470,9 +469,7 @@ jobs:
                         <div class="card">
                             <h3>2) Choose providers &amp; models</h3>
                             <p>
-                                Configure Gemini, ChatGPT, or Claude (or all
-                                three). Pick default models and per-command
-                                overrides.
+                                Configure Gemini, ChatGPT, Claude, or any OpenAI-compatible endpoint (Mistral, DeepSeek, …). Pick default models and per-command overrides.
                             </p>
                         </div>
                         <div class="card">
@@ -690,7 +687,7 @@ jobs:
                     </p>
                     <ul>
                         <li>Open-source, community-friendly</li>
-                        <li>Provider-agnostic: Gemini, ChatGPT, Claude</li>
+                        <li>Provider-agnostic: Gemini, ChatGPT, Claude, or any OpenAI-compatible endpoint (Mistral, DeepSeek, …)</li>
                         <li>PR-native UX through GitHub Actions</li>
                         <li>Configurable prompts, policies, and outputs</li>
                     </ul>
