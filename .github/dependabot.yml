@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Keep GitHub Actions references current (the Aido reusable-workflow pins and
+  # any actions used by this repo's workflows). aido-web is a static site with no
+  # package manifest, so github-actions is the only ecosystem to track.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(actions)"
