@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   aido-auto:
-    uses: aido-dev/aido/.github/workflows/aido-auto.yml@v1.5.2
+    uses: aido-dev/aido/.github/workflows/aido-auto.yml@v1.6.4
     with:
       aido_ref: v1.5.2
     secrets:
